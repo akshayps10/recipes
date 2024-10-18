@@ -8,13 +8,13 @@ const Home = () => {
   const dispatch = useDispatch();
   const { allRecipes, loading, error } = useSelector(state => state.recipeReducer);
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchValue, setSearchValue] = useState(""); // State for search input
+  const [searchValue, setSearchValue] = useState(""); 
   const recipesPerPage = 4;
   const totalPages = Math.ceil(allRecipes?.length / recipesPerPage);
   const currentPageLastRecipeIndex = currentPage * recipesPerPage;
   const currentPageStartRecipeIndex = currentPageLastRecipeIndex - recipesPerPage;
 
-  // Filter recipes based on the search value
+
   const filteredRecipes = allRecipes.filter(recipe => 
     recipe.cuisine.toLowerCase().includes(searchValue.toLowerCase())
   );
@@ -90,7 +90,7 @@ const Home = () => {
                     </div>
                 }
               </div>
-              {/* PAGINATION */}
+            
               <div className="flex justify-center items-center mt-5 mb-5">
                 <span 
                   style={{ cursor: 'pointer' }} 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { searchRecipe } from '../redux/slices/recipeSlice';  // Updated to match the correct name
+import { searchRecipe } from '../redux/slices/recipeSlice';  
 
 const Header = ({ insideHome }) => {
   const dispatch = useDispatch();

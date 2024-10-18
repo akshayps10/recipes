@@ -1,21 +1,21 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';         // Displays all recipes
-import View from './pages/View';         // View individual recipe details
-import Cart from './pages/Cart';         // Shopping cart functionality
-import Wishlist from './pages/Wishlist'; // Wishlist functionality
-import Pnf from './pages/Pnf';           // Page not found component
-import Footer from './components/Footer'; // Footer component
+import Home from './pages/Home';        
+import View from './pages/View';       
+import Cart from './pages/recipeList';         
+import Wishlist from './pages/display'; 
+import Pnf from './pages/Pnf';         
+import Footer from './components/Footer'; 
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Home />} />               {/* Home page for listing recipes */}
-        <Route path='/wishlist' element={<Wishlist />} />   {/* Wishlist page */}
-        <Route path='/cart' element={<Cart />} />           {/* Cart page */}
-        <Route path='/:id/view' element={<View />} />       {/* View individual recipe by ID */}
-        <Route path='/*' element={<Pnf />} />                {/* 404 Not Found page */}
+        <Route path='/' element={<Home />} />               
+        <Route path='/wishlist' element={<Wishlist />} />   
+        <Route path='/cart' element={<Cart />} />           
+        <Route path='/:id/view' element={<View />} />      
+        <Route path='/*' element={<Pnf />} />                
       </Routes>
       <Footer />
     </>
